@@ -7,5 +7,7 @@
     <string name="title_activity_splash_screen">HangMan by Nuthapol&amp;Ryan</string>
     <string name="title_activity_hang_man">WordGuess</string>
     <string name="title_activity_result">Result</string>
+    <string name="type_three_words">type three words:</string>
+    
 
 </resources>

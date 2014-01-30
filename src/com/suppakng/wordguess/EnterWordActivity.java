@@ -24,14 +24,23 @@ import android.widget.TextView.OnEditorActionListener;
 public class EnterWordActivity extends Activity {
 	PopupWindow popUp;
 	Button startB;
-	EditText editText1;
+	EditText etWord1;
+	EditText etWord2;
+	EditText etWord3;
+	EditText etUserName;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        
         setContentView(R.layout.activity_enterword);
+     	//Find and initialize all of the controls
         startB = (Button)findViewById(R.id.replayButton);
-        editText1 = (EditText)findViewById(R.id.guessCharInput);
+        etWord1 = (EditText)findViewById(R.id.guessCharInput);
+        etWord2 = (EditText)findViewById(R.id.seond_word);
+        etWord3 = (EditText)findViewById(R.id.third_word);
+        etUserName = (EditText)findViewById(R.id.etUserName);
         popUp = new PopupWindow(this);
         
         final TextView errorMessage = (TextView)findViewById(R.id.result);     
@@ -51,7 +60,7 @@ public class EnterWordActivity extends Activity {
    	    });
         
       //Key listener for the word to properly close the keyboard when enter is pressed
-       editText1.setOnKeyListener(new OnKeyListener() {
+       etWord1.setOnKeyListener(new OnKeyListener() {
     	    public boolean onKey(View v, int keyCode, KeyEvent event) {
     	        if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER || keyCode == KeyEvent.KEYCODE_DPAD_CENTER)) {
     	            //sendMessage(v);
@@ -67,15 +76,24 @@ public class EnterWordActivity extends Activity {
 			@Override
 			public void onClick(View v) 
 			{
-			  if(editText1.length()> 0)
+			  if(etWord1.length()> 0)
 			  {
 				
 				Intent intent = new Intent(EnterWordActivity.this, HangMan.class);
-		        String value = editText1.getText().toString();
+				
+		        String word1 = etWord1.getText().toString();
+		        String word2 = etWord2.getText().toString();
+		        String word3 = etWord3.getText().toString();
 		        String hinter = hint.getText().toString();
+		        String userName = etUserName.getText().toString();
 		        
-				intent.putExtra("user_word", value);
+		        //all of the information in the text fields are passed in here to the next intent
 				intent.putExtra("user_hint", hinter );
+				intent.putExtra("word1", word1);
+				intent.putExtra("word2", word2);
+				intent.putExtra("word3", word3);
+				intent.putExtra("user_name", userName );
+				
 				
 				EnterWordActivity.this.startActivity(intent);
 		        EnterWordActivity.this.finish();
