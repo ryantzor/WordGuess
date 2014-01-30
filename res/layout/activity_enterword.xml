@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EnterWordActivity" >
+
+    <EditText
+        android:id="@+id/guessCharInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hiddenWord"
+        android:layout_toRightOf="@+id/hiddenWord"
+        android:ems="10"
+        android:inputType="textCapCharacters|textPassword"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/tvHintArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guessCharInput"
+        android:layout_alignTop="@+id/tvHint"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/replayButton"
+        android:layout_alignLeft="@+id/hiddenWord"
+        android:layout_marginBottom="28dp"
+        android:text="Type in a hint:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/replayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="155dp"
+        android:imeOptions="actionDone"
+        android:text="START" />
+
+    <TextView
+        android:id="@+id/hiddenWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvHintArea"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="19dp"
+        android:text="Type in a word:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hangManText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hiddenWord"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:text="Welcome to Hangman!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+    
+        android:textSize="24dp" />
+
+</RelativeLayout>
