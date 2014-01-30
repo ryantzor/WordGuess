@@ -1,21 +1,19 @@
 package com.suppakng.wordguess;
 
 
-import java.io.FileOutputStream;
-
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
-//Written By Nuthapol Suppakitjarak & Ryan Tuller
+//Written By Nuthapol Suppakitjarak & Ryan Tuller & Kathryn Dew & Kyle Berry
 /*
  * Tested the startup to make sure the splash screen + sound clip appear
  * Tested to make sure the slash screen closes and startsup the next activity
  * 
  */
 public class SplashScreen extends Activity {
+	String data = "";
 	MediaPlayer ourSong;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,18 +43,7 @@ public class SplashScreen extends Activity {
 			}
 		};
 		timer.start();
-		
-		String filename = "myfile";
-		String string = "Hello world!";
-		FileOutputStream outputStream;
-
-		try {
-		  outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-		  outputStream.write(string.getBytes());
-		  outputStream.close();
-		} catch (Exception e) {
-		  e.printStackTrace();
-		}
+		//Reading the file or creating a  new one if it doesn't exist
 	}
 
 	@Override

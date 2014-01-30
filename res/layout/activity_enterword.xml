@@ -8,37 +8,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".EnterWordActivity" >
 
-    <TextView
-        android:id="@+id/hangManText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:text="Welcome to Hangman!"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="24dp" />
-
-    <TextView
-        android:id="@+id/hiddenWord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hangManText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:text="Type Three Words:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/tvHintArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/replayButton"
         android:layout_centerHorizontal="true"
-        android:ems="10" >
+        android:ems="10" />
 
-        <requestFocus />
-    </EditText>
 
     <TextView
         android:id="@+id/tvHint"
@@ -87,15 +64,47 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
+        android:id="@+id/third_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seond_word"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textCapCharacters|textPassword"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/hangManText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/first_word"
+        android:text="Welcome to Hangman!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/hiddenWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hangManText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Type Three Words:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
         android:id="@+id/first_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/etUserName"
         android:layout_below="@+id/hiddenWord"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textCapCharacters|textPassword"
-        android:singleLine="true" />
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
 
     <EditText
         android:id="@+id/seond_word"
@@ -103,16 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/third_word"
         android:layout_alignLeft="@+id/first_word"
-        android:ems="10"
-        android:inputType="textCapCharacters|textPassword"
-        android:singleLine="true" />
-
-    <EditText
-        android:id="@+id/third_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/seond_word"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textCapCharacters|textPassword"
         android:singleLine="true" />

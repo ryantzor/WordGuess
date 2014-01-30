@@ -8,6 +8,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Result" >
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:text="Word"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
         android:id="@+id/replayButton"
         android:layout_width="wrap_content"
@@ -18,80 +28,43 @@
         android:text="Play Again?" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:text="Word"
+        android:layout_alignLeft="@+id/replayButton"
+        android:layout_below="@+id/replayButton"
+        android:layout_marginTop="24dp"
+        android:text="High Scores"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/firstPlaceLabel"
+        android:id="@+id/player3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/replayButton"
-        android:layout_marginTop="108dp"
-        android:text="1st"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignLeft="@+id/player2"
+        android:layout_below="@+id/player2"
+        android:layout_marginTop="19dp"
+        android:text="Player3"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/secondPlaceLabel"
+        android:id="@+id/player1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/firstPlaceLabel"
-        android:text="2nd"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp"
+        android:text="Player1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/thirdPlaceLabel"
+        android:id="@+id/player2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/secondPlaceLabel"
-        android:text="3rd"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/tv1stScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/firstPlaceLabel"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/secondPlaceLabel"
-        android:text="best player"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/tv2ndScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/thirdPlaceLabel"
-        android:layout_alignLeft="@+id/tv1stScore"
-        android:text="2nd best player"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/tv3rdScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/thirdPlaceLabel"
-        android:layout_alignBottom="@+id/thirdPlaceLabel"
-        android:layout_alignLeft="@+id/tv2ndScore"
-        android:text="3rd best player"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/highScoreLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tv1stScore"
-        android:layout_alignRight="@+id/replayButton"
-        android:layout_marginBottom="15dp"
-        android:text="High Scores:"
+        android:layout_alignLeft="@+id/player1"
+        android:layout_below="@+id/player1"
+        android:layout_marginTop="19dp"
+        android:text="Player2"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

@@ -8,16 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".HangMan" >
 
-    <TextView
-        android:id="@+id/guessLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/hiddenWord"
-        android:layout_marginTop="21dp"
-        android:text="Guess the Letter:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/guessCharInput"
         android:layout_width="wrap_content"
@@ -29,10 +19,7 @@
         android:inputType="textCapCharacters"
         android:maxLength="1"
         android:maxLines="1"
-        android:singleLine="true" >
-
-        <requestFocus />
-    </EditText>
+        android:singleLine="true" />
 
     <TextView
         android:id="@+id/hiddenWord"
@@ -45,31 +32,33 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/guessedCharList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/guessedChar"
-        android:layout_toRightOf="@+id/guessedChar"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/guessedChar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tvHint"
         android:layout_alignLeft="@+id/guessLabel"
-        android:layout_below="@+id/guessCharInput"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="19dp"
         android:text="Guessed Char:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvHint"
+        android:id="@+id/hiddenWord1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/guessedChar"
-        android:layout_below="@+id/guessedChar"
-        android:layout_marginTop="28dp"
-        android:text="Hint"
+        android:layout_alignLeft="@+id/hiddenWord"
+        android:layout_below="@+id/hiddenWord"
+        android:layout_marginTop="34dp"
+        android:text="******"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/guessedCharList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/guessedChar"
+        android:layout_alignRight="@+id/guessCharInput"
+        android:layout_alignTop="@+id/guessedChar"
+        android:layout_toRightOf="@+id/guessLabel"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -77,9 +66,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvHint"
-        android:layout_below="@+id/tvHint"
-        android:layout_marginTop="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="39dp"
         android:text="HANGMAN"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hangManText"
+        android:layout_alignLeft="@+id/guessedChar"
+        android:layout_marginBottom="16dp"
+        android:text="Hint"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hiddenWord2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hiddenWord1"
+        android:layout_below="@+id/hiddenWord1"
+        android:layout_marginTop="31dp"
+        android:text="******"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/guessLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hiddenWord2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Guess Enter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/guessEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guessLabel"
+        android:layout_below="@+id/guessLabel"
+        android:text="Enter" />
 
 </RelativeLayout>
