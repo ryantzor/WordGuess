@@ -98,21 +98,21 @@
         android:singleLine="true" />
 
     <EditText
-        android:id="@+id/third_word"
+        android:id="@+id/seond_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etUserName"
-        android:layout_below="@+id/first_word"
+        android:layout_above="@+id/third_word"
+        android:layout_alignLeft="@+id/first_word"
         android:ems="10"
         android:inputType="textCapCharacters|textPassword"
         android:singleLine="true" />
 
     <EditText
-        android:id="@+id/seond_word"
+        android:id="@+id/third_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etUserName"
-        android:layout_below="@+id/third_word"
+        android:layout_alignLeft="@+id/seond_word"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:inputType="textCapCharacters|textPassword"
         android:singleLine="true" />

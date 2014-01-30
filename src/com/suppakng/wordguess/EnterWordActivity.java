@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
 //Written By Nuthapol Suppakitjarak & Ryan Tuller
 /*
 * Tested the startup to make sure the UI tool appear and respond accordingly 
